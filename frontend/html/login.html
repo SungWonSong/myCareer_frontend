@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Page</title>
+    <link rel="stylesheet" href="/frontend/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+    <body>
+        <header>
+            <div class="main_header">
+                <a href="http://localhost:8080">
+                <img src="/frontend/img/Career 로고.png" alt="Career_logo" class="header_logo"></a>
+                <div class="auth_buttons">
+                    <h4 class="header_item">로그인</h4><br>
+                    <hr class="header_item">
+                    <h4 class="header_item">회원가입</h4>
+                    <!-- h4태그에도 추후 로그인, 회원가입 페이지 a태그로 삽입해야됨 -->
+                </div>
+            </div>
+            <hr class="division_line">
+        </header>
+        <main>
+           <div class="main_board">
+                    <form class = input_n_button>
+                        <div class="welcome_title">이메일로 로그인 하시겠습니까?</div>
+                        <div class="input_container">
+                            <div class="input_inner">
+                                <i class="fas fa-user"></i>
+                                <input type="email" class="main_input" placeholder="이메일을 입력하세요">    
+                            </div>
+                            <div class="input_inner">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" class="main_input" placeholder="비밀번호를 입력하세요">
+                            </div>
+                        </div>
+                        <button class="login_button">로그인</button>
+                    </form>
+           </div>
+        </main>
+
+        <script>
+            document.querySelectorAll('.main_input').forEach(function(input) {
+                input.addEventListener('focus', function() {
+                    this.previousElementSibling.style.opacity = 1;
+                });
+    
+                input.addEventListener('blur', function() {
+                    this.previousElementSibling.style.opacity = 0.5;
+                });
+            });
+        </script>
+        <!-- javascript 기능은 현재 i가 input보다 부모기에 순서를 바꿔야되서 결국 js로 동작 진행(공부 필요) -->
+    </body>
+</html>
