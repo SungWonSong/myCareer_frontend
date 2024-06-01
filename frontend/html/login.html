@@ -24,7 +24,7 @@
         <main>
            <div class="main_board">
                     <form class = input_n_button>
-                        <div class="welcome_title">이메일로 로그인 하시겠습니까?</div>
+                        <div class="welcome_title">Welcome to Login</div>
                         <div class="input_container">
                             <div class="input_inner">
                                 <i class="fas fa-user"></i>
@@ -36,6 +36,23 @@
                             </div>
                         </div>
                         <button class="login_button">로그인</button>
+                        <div class="find_email_password">
+                            <h5 class="buttom_bottom">아이디 찾기</h4>
+                            <hr class="buttom_bottom">
+                            <h5 class="buttom_bottom">비밀번호 찾기</h4>
+                        </div>
+                        <div class="social_title">소셜 로그인</div>
+                        <div class="all_login_bt">
+                            <button onclick="loginWithKakao()" class="kakao-login">
+                                <img src="/frontend/img/카카오톡 로고.webp" alt="Kakao"/>카카오톡 로그인
+                            </button>
+                            <button onclick="loginWithNaver()" class="naver-login">
+                                <img src="/frontend/img/btnG_아이콘사각.png" alt="Naver"/>네이버 로그인
+                            </button>
+                            <button onclick="loginWithGoogle()" class="google-login">
+                                <img src="/frontend/img/구글 로고.png" alt="Google"/>구글 로그인
+                            </button>
+                        </div>
                     </form>
            </div>
         </main>
