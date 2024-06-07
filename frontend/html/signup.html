@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp_page</title>
+    <link rel="stylesheet" href="/frontend/css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div class = career_title>
-        <div>
-            
+    <body>
+        <header>
+            <div class="main_header">
+                <a href="http://localhost:8080">
+                <img src="/frontend/common/img/Career 로고.png" alt="Career_logo" class="header_logo"></a>
+                <div class="auth_buttons">
+                    <h4 class="header_item">로그인</h4><br>
+                    <hr class="header_item">
+                    <h4 class="header_item">회원가입</h4>
+                    <!-- h4태그에도 추후 로그인, 회원가입 페이지 a태그로 삽입해야됨 -->
+                </div>
+            </div>
+            <hr class="division_line">
+        </header>
+        <div class="main_board">
+            <form>
+                <div class="welcome_title">S I G N __ U P</div>
+                <div class="several_title">E-mail</div>
+                <div class="input_container">
+                  <input type="email" class="main_input" id="exampleInputEmail1" aria-describedby="emailHelp"placeholder="이메일을 입력하세요">
+                </div>
+                <div class="several_title">Password</div>
+                <div class="input_container">
+                  <input type="password" class="main_input" id="exampleInputPassword1"placeholder="비밀번호를 입력하세요">
+                </div>
+                <div class="mb-3 form-check">
+                <div class="several_title">Status</div>
+                  <label for="select"></label>
+                  <select class="select_status" id="selectStatus">
+                    <option value="" selected>선택</option>
+                    <option value="top-0 start-0">취업준비생</option>
+                    <option value="top-0 start-50 translate-middle-x">회사 인사팀</option>
+                  </select>
+                </div>
+                <div class="submission">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <button type="submit" class="register_button">회원 등록하기</button>
+                </div>
+              </form>
         </div>
     </div>
     
