@@ -3,6 +3,18 @@
 }
 /* 이걸 통해서 ->  */
 
+@font-face {
+    font-family: 'NanumSquareRound'; 
+    src: url('/frontend/common/font/NanumSquareRoundOTFB.otf'); 
+}
+/* 메인 제목, 부제목 폰트 */
+
+@font-face {
+    font-family: 'CormorantGaramond'; 
+    src: url('/frontend/common/font/CormorantGaramond-Medium.ttf'); 
+}
+/* body에 사용하는 폰트 */
+
 .main_header {
     display: flex; 
     justify-content: space-between;
@@ -13,7 +25,6 @@
 .header_logo {
     width: 250px;
     height: auto;
-    /* margin-right : 150px; */
 }
 
 .header_item {
@@ -54,10 +65,12 @@
 
 .welcome_title {
     color : black;
-    text-align: left;    
-    font-size: large;
-    margin-bottom: 30px;
+    text-align: center;    
+    font-size: 30px;
+    font-family: 'NanumSquareRound' ;
+    margin-bottom: 40px;
 }
+
 .input_n_button {
     height: 500px;
     justify-content: center;
@@ -93,7 +106,7 @@
     width: 330px;
     max-width: 350px;
     padding: 10px;
-    margin-top: 15px;
+    margin-top: 18px;
     background-color: black;
     color: white;
     border: none;
@@ -101,6 +114,7 @@
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
+    font-family: 'CormorantGaramond';
 }
 .input_inner {
     display: flex;
@@ -124,22 +138,23 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top : 20px;
-    margin-bottom: 20px;
+    margin-top : 13px;
+    margin-bottom: 30px;
     gap: 20px;
 }
 
 .buttom_bottom {
-    margin: 10px 0;  /* 상하 간격을 10px로 설정 */
+    margin: 10px 0;
+    font-family: 'CormorantGaramond';  /* 상하 간격을 10px로 설정 */
 }
 
 h5.buttom_bottom {
     font-weight: 300;  /* 글씨를 얇게 설정, 필요에 따라 조정 */
 }
 
-.social_title {
+/* .social_title {
     
-}
+} */
 
 .all_login_bt {
     display: flex;
@@ -154,11 +169,12 @@ h5.buttom_bottom {
     background-color: #FEE500;
     color: black;
     font-size: 16px;
-    font-weight:450; 
+    font-weight: 450; 
+    font-family: 'CormorantGaramond';
     border: none;
     padding: 10px 20px;
     width: 330px;
-    height: 45px;
+    height: 40px;
     max-width: 350px;
     cursor: pointer;
     border-radius: 5px;
@@ -181,10 +197,11 @@ h5.buttom_bottom {
     color: white;
     font-size: 16px;
     font-weight:450; 
+    font-family: 'CormorantGaramond';
     border: none;
     padding: 10px 20px;
     width: 330px;
-    height: 45px;
+    height: 40px;
     max-width: 350px;
     cursor: pointer;
     border-radius: 5px; 
@@ -208,10 +225,11 @@ h5.buttom_bottom {
     color: black;
     font-size: 16px;
     font-weight: 450;
+    font-family: 'CormorantGaramond';
     border: black;
     padding: 10px 20px;
     width: 330px;
-    height: 45px;
+    height: 40px;
     max-width: 350px;
     cursor: pointer;
     border-radius: 5px; 
