@@ -47,13 +47,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.main_title {
+    font-family: 'NanumSquareRound';
+    font-size: large;
 }
 
 .main_form {
     background-color: white;
     border-radius: 10px;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     width: 450px;
     max-width: 100%;
     height: 500px;
@@ -64,7 +69,7 @@ body {
     text-align: left;    
     font-size: 25px;
     font-weight: bold;
-    font-family: 'NanumSquareRound' ;
+    font-family: 'NanumSquareRound';
     margin-top: 20px;
     margin-bottom: 40px;
 }
