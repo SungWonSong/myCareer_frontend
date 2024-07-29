@@ -29,7 +29,7 @@
         height: auto;
     }
 }
-/* media query를 사용해서 이미지가 작아졌을겨우 margin-left를 -15로 주어 왼쪽으로 이동시켰다. */
+/* media query를 사용해서 이미지가 작아졌을겨우 margin-left를 -10로 주어 왼쪽으로 이동시켰다. */
 
 .main_header {
     display: flex; 

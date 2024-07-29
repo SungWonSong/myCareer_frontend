@@ -10,12 +10,13 @@
     <body>
         <header>
             <div class="main_header">
+              <div class ="logo_wrapper">
                 <a href="http://localhost:8080">
                 <img src="/frontend/common/img/Career 로고.png" alt="Career_logo" class="header_logo"></a>
-                <div class="auth_buttons">
+                <!-- <div class="auth_buttons">
                     <h4 class="header_item">로그인</h4><br>
                     <hr class="header_item">
-                    <h4 class="header_item">회원가입</h4>
+                    <h4 class="header_item">회원가입</h4> -->
                     <!-- h4태그에도 추후 로그인, 회원가입 페이지 a태그로 삽입해야됨 -->
                 </div>
             </div>
@@ -25,31 +26,73 @@
             <h2 class="main_title">CAREER를 활용하여 취업에 성공하세요.</h2>
             <form class="main_form">
                 <div class="welcome_title">CAREER 가입</div>
-                <div class="several_title">E-mail</div>
+                <div class="explain_register">Career에 가입하려면, 각 항목의 자세히 보기 링크를 클릭해서 Career의 개인 정보 처리 방식을 이해해야 합니다.</div>
+                <div class="agreement-container">
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="agreeAll">
+                      <label class="form-check-label" for="agreeAll">전체 약관에 동의합니다.</label>
+                  </div>
+              
+                  <div class="form-check agreement">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" class="individual-check">
+                      <label class="form-check-label" for="Check1">Career의 개인정보 수집과 사용에 동의합니다.</label>
+                  </div>
+              
+                  <div class="form-check agreement">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck2" class="individual-check">
+                      <label class="form-check-label" for="Check2">Career는 서비스 제공을 위해 개인 정보를 타사에 공유합니다</label>
+                  </div>
+              </div>
+
+                <div class="several_title">이메일</div>
                 <div class="input_container">
                   <input type="email" class="main_input" id="exampleInputEmail1" aria-describedby="emailHelp"placeholder="이메일을 입력하세요">
                 </div>
-                <div class="several_title">Password</div>
+                <div class="several_title">비밀번호</div>
                 <div class="input_container">
                   <input type="password" class="main_input" id="exampleInputPassword1"placeholder="비밀번호를 입력하세요">
                 </div>
-                <div class="mb-3 form-check">
+                <!-- <div class="mb-3 form-check">
                 <div class="several_title">Status</div>
                   <label for="select"></label>
                   <select class="select_status" id="selectStatus">
                     <option value="" selected>선택</option>
                     <option value="top-0 start-0">취업준비생</option>
                     <option value="top-0 start-50 translate-middle-x">회사 인사팀</option>
-                  </select>
-                </div>
+                  </select> -->
+                <!-- </div> -->
                 <div class="submission">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  <button type="submit" class="register_button">회원 등록하기</button>
+                  <button type="submit" class="register_button">회원으로 참여하시겠습니까?</button>
                 </div>
               </form>
         </div>
     </div>
+    <script> // 현재 작동되지 않음 (추후 개선필요)
+      // // 전체 동의 체크박스와 개별 체크박스 선택
+      // const agreeAllCheckbox = document.getElementById('agreeAll');
+      // const individualCheckboxes = document.querySelectorAll('.individual-check');
+  
+      // // 전체 동의 체크박스의 상태가 변경될 때
+      // agreeAllCheckbox.addEventListener('change', function() {
+      //     individualCheckboxes.forEach(checkbox => {
+      //         checkbox.checked = this.checked; // 전체 동의 체크박스에 따라 개별 체크박스 상태 변경
+      //     });
+      // });
+  
+      // // 개별 체크박스의 상태가 변경될 때
+      // individualCheckboxes.forEach(checkbox => {
+      //     checkbox.addEventListener('change', function() {
+      //         if (!this.checked) {
+      //             agreeAllCheckbox.checked = false; // 개별 체크박스가 해제되면 전체 동의 체크박스도 해제
+      //         } else {
+      //             // 모든 개별 체크박스가 체크된 경우 전체 동의 체크박스를 체크
+      //             if ([...individualCheckboxes].every(cb => cb.checked)) {
+      //                 agreeAllCheckbox.checked = true;
+      //             }
+      //         }
+      //     });
+      // });
+  </script>
     
 </body>
 </html>
