@@ -15,6 +15,9 @@
 }
 /* body에 사용하는 폰트 */
 
+.logo_wrapper {
+    padding-right: 10px;
+}
 
 .main_header {
     display: flex; 
@@ -26,19 +29,30 @@
 .header_logo {
     width: 250px;
     height: auto;
+    padding-right : 30px;
+}
+
+
+.auth_buttons {
+    display: flex; 
+    padding-right: 20px; /* h4를 포함한 버튼을 오른쪽에서 Padding 80px만큼 거리를둠... */
 }
 
 .header_item {
     margin-left: 20px; /* 요소들 간의 간격 조정 */
 }
 
+
+/* 작은 화면을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .auth_buttons {
+        margin: 10px; /* 여백 조정 */
+    }
+}
+
 /* .auth_buttons h4 {
     margin-left: 20px; /* 로그인과 회원가입 버튼 사이의 간격 조절 (위에거랑 같다 -> class 적용이냐 / auth_buttons의 h4의 적용*/
 
-.auth_buttons {
-    display: flex; 
-    padding-right: 80px; /* h4를 포함한 버튼을 오른쪽에서 Padding 80px만큼 거리를둠... */
-}
 
 .division_line { 
     border: none; /* 기본 경계선 제거 */
