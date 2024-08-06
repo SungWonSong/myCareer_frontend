@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서 목록</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">이력서 목록</h1>
+        <div class="row" id="resume-list"></div>
+        <div class="text-center" id="loading" style="display:none;">
+            <h4>로딩 중...</h4>
+        </div>
+    </div>
+
+    <script>
+        let page = 0;
+        const size = 8;
+
+        const loadResumes = async () => {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'block';
+
+            const response = await fetch(`/api/resumes?page=${page}&size=${size}`);
+            const resumes = await response.json();
+
+            const resumeList = document.getElementById('resume-list');
+            resumes.content.forEach(resume => {
+                const card = document.createElement('div');
+                card.className = 'col-md-4 mb-4';
+                card.innerHTML = `
+                    <div class="card">
+                        <img src="${resume.imageUrl}" class="card-img-top" alt="이력서 이미지">
+                        <div class="card-body">
+                            <h5 class="card-title">${resume.username}</h5>
+                            <p class="card-text">${resume.position}</p>
+                            <a href="#" class="btn btn-primary">상세보기</a>
+                        </div>
+                    </div>
+                `;
+                resumeList.appendChild(card);
+            });
+
+            loading.style.display = 'none';
+            page++;
+        };
+
+        // 초기 로딩
+        loadResumes();
+
+        // 스크롤 이벤트 처리
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                loadResumes();
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
